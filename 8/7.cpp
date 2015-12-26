@@ -5,6 +5,7 @@
 using namespace std;
 int main()
 {
+
 	vector<string> str;
 	string filename, s;
 	cout << "input filename:" << endl;
@@ -15,7 +16,7 @@ int main()
 		cerr << "error:can not open file:" << filename << endl;
 		return -1;
 	}
-	while (getline(infile, s))
+	while (infile >> s)
 		str.push_back(s);
 	for (vector<string>::const_iterator it = str.begin();it != str.end();++it)
 		cout << *it << endl;
