@@ -18,6 +18,7 @@ int main()
 	}
 	while (infile >> s)
 		str.push_back(s);
+	infile.close();
 	for (vector<string>::const_iterator it = str.begin();it != str.end();++it)
 		cout << *it << endl;
 	return 0;
